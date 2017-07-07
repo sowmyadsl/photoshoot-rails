@@ -1,13 +1,13 @@
 <h1>Services</h1>
 
-
+<div class="flex-box">
   <% @services.each do |service| %>
   <h1><%= service.name %></h1>
     <%= link_to service_path(service) do  %>
       <%=image_tag service.image%>
     <% end %>
   <% end %>
-
+</div>
 
 <hr>
 
