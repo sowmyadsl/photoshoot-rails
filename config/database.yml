@@ -1,0 +1,18 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+development:
+  <<: *default
+  database: photoshoot_development
+
+test:
+  <<: *default
+  database: photoshoot_test
+
+production:
+  <<: *default
+  database: photoshoot_production
+  username: photoshoot
+  password: <%= ENV['PHOTOSHOOT_DATABASE_PASSWORD'] %>
