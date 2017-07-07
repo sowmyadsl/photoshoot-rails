@@ -1,11 +1,11 @@
-##Grace Photography
+## Grace Photography
 
 This is a ruby on rails application built for a photographer who locally captures beautiful pictures and shares her services throughout Oregon.
 
 
 By Sowmya Dinavahi
 
-##Description:
+## Description:
 
 This application is build in consideration with users(customers) and grace(photographer ie. admin).These roles includes user authentication using Device gem.
 
