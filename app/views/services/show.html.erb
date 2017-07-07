@@ -1,0 +1,7 @@
+<h1>Show Service</h1>
+
+<p><%= link_to "Edit", edit_service_path(@service) %></p>
+<p><%= link_to "Delete", service_path(@service),
+                         :data => {:confirm => "You sure?",
+                                   :method => "delete"} %></p>
+<p><%= link_to "Return to services", services_path %></p>
