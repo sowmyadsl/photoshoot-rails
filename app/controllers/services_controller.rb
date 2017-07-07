@@ -1,4 +1,6 @@
 class ServicesController < ApplicationController
+  before_action :authenticate_user!, except: [:index, :show]
+
   def index
     @services = Service.all
   end
@@ -8,11 +10,11 @@ class ServicesController < ApplicationController
   end
 
   def new
-    @service = Service.new
+    @service = current_user.services.build
   end
 
   def create
-    @service = Service.new(service_params)
+    @service = current_user.services.build(service_params)
     if @service.save
     flash[:notice] = "Service successfully added!"
       redirect_to  services_path
