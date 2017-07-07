@@ -46,6 +46,6 @@ class ServicesController < ApplicationController
 private
   def service_params
     # Use strict parameters, replace placeholder info below with your class' actual attributes
-    params.require(:service).permit(:attribute1, :attribute2, :attribute3)
+    params.require(:service).permit(:name, :description, :price, :image)
   end
 end

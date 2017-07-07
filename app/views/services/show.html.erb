@@ -1,5 +1,10 @@
 <h1>Show Service</h1>
 
+<h2><%= @service.name %></h2>
+<h3><%= @service.description%></h3>
+<figure><%=image_tag @service.image %></figure>
+<h4><%= @service.price %></h4>
+
 <p><%= link_to "Edit", edit_service_path(@service) %></p>
 <p><%= link_to "Delete", service_path(@service),
                          :data => {:confirm => "You sure?",
