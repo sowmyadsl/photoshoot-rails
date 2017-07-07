@@ -8,3 +8,7 @@
     <% end %>
   <% end %>
 </div>
+
+<% if current_user.try(:admin?) %>
+  <button><%= link_to "New Service", new_service_path %></button>
+<% end %>

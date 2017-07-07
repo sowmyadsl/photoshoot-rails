@@ -1,6 +1,10 @@
 class ServicesController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
 
+  before_action :only => [:new, :create, :edit, :update, :destroy] do
+   redirect_to new_user_session_path unless current_user && current_user.admin
+ end
+
   def index
     @services = Service.all
   end
@@ -10,11 +14,11 @@ class ServicesController < ApplicationController
   end
 
   def new
-    @service = current_user.services.build
+    @service = Service.new
   end
 
   def create
-    @service = current_user.services.build(service_params)
+    @service = Service.new(service_params)
     if @service.save
     flash[:notice] = "Service successfully added!"
       redirect_to  services_path

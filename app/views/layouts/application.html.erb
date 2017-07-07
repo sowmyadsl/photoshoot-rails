@@ -12,21 +12,23 @@
 	<header class="navbar navbar-default" role="navigation">
     <div class="navbar-inner">
       <div class="container">
-        <div id="logo" class="navbar-brand"><%= link_to "Home", root_path %></div>
-        <nav class="collapse navbar-collapse navbar-ex1-collapse">
-        	<% if user_signed_in? -%>
-						<ul class="nav navbar-nav navbar-right">
-							<li><%= link_to 'Add Service', new_service_path %></li>
-							<li><%= link_to 'Account', edit_user_registration_path %></li>
-							<li><%= link_to 'Sign out', destroy_user_session_path, :method => :delete %></li>
-						</ul>
-					<% else -%>
-						<ul class="nav navbar-nav pull-right">
-							<li><%= link_to 'Sign up', new_user_registration_path %></li>
-							<li><%= link_to 'Sign in', new_user_session_path %></li>
-						</ul>
-					<% end -%>
-        </nav>
+        <% if user_signed_in? -%>
+        <div id="logo" class="navbar-brand"><%= link_to "Home", root_path%> | <%= link_to 'Services', services_path %>
+        </div>
+        <p class="navbar-text pull-right">
+          Logged in as <strong><%= current_user.email %></strong> |
+          <%= link_to 'Edit Profile', edit_user_registration_path %> |
+          <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+        </p>
+        <% else %>
+          <p class="navbar-text pull-left">
+            <%= link_to 'Home', home_index_path%> | <%= link_to 'Services', services_path %>
+          </p>
+          <p class="navbar-text pull-right">
+            <%= link_to "Sign up", new_user_registration_path %> |
+            <%= link_to "Login", new_user_session_path  %>
+          </p>
+        <% end %>
       </div>
     </div>
   </header>

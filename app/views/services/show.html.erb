@@ -1,12 +1,72 @@
-<h1>Services Offered</h1>
+<h1><%= @service.name %></h1>
 
-<h2><%= @service.name %></h2>
-<h3><%= @service.description%></h3>
-<figure><%=image_tag @service.image %></figure>
-<h4><%= @service.price %></h4>
-
+<% if current_user.try(:admin?) %>
 <p><%= link_to "Edit", edit_service_path(@service) %></p>
 <p><%= link_to "Delete", service_path(@service),
                          :data => {:confirm => "You sure?",
                                    :method => "delete"} %></p>
+<% end %>
+
+
+
+<h1><%= @service.name %></h1>
+<h3><%= @service.description%></h3>
+<figure><%=image_tag @service.image %></figure>
+<h4><%= @service.price %></h4>
+
+<hr>
+
+<h3>Reviews:</h3>
+
+<% if current_user %>
+  <button><%= link_to "Add a review", new_service_review_path(@service) %></button>
+<% end %>
+
+
+
+<% if @service.reviews.any? %>
+  <ul>
+    <% @service.reviews.each do |review| %>
+      <li>
+        <%= review.author %> |
+        <%= review.body %>
+        <% if current_user && current_user.admin %>
+          <button>
+            <%= link_to "Delete", service_review_path(@service, review),
+              :data => {:confirm => "Are you sure?",
+              :method => "delete"}
+            %>
+          </button>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>There are no reviews yet!</p>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <p><%= link_to "Return to services", services_path %></p>
