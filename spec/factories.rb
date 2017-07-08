@@ -1,10 +1,10 @@
 FactoryGirl.define do
-  factory :user do 
+  factory :user do
     email 'udai@email.com'
     password 'password'
   end
 
-  factory :admin_user, class: User do
+  factory :admin, class: User do
     email 'admin@admin.com'
     password 'password'
     admin true

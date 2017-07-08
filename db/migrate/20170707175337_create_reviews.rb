@@ -3,7 +3,6 @@ class CreateReviews < ActiveRecord::Migration[5.1]
     create_table :reviews do |t|
       t.column :author, :string
       t.column :body, :string
-      t.column :user_id, :integer
       t.column :service_id, :integer
 
       t.timestamps
