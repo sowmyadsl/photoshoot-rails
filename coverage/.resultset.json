@@ -1,31 +1,6 @@
 {
   "RSpec": {
     "coverage": {
-      "/Users/sowmyaudai/projects/photoshoot/spec/features/add_review_pages_spec.rb": [
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null,
-        null
-      ],
       "/Users/sowmyaudai/projects/photoshoot/spec/features/add_service_pages_spec.rb": [
         1,
         null,
@@ -705,7 +680,21 @@
         1,
         null,
         1,
-        26,
+        27,
+        null,
+        null
+      ],
+      "/Users/sowmyaudai/projects/photoshoot/spec/features/delete_service_pages_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
         null,
         null
       ],
@@ -875,15 +864,15 @@
         1,
         null,
         1,
-        14,
+        15,
         null,
         null,
         1,
-        3,
+        4,
         null,
         null,
         1,
-        0,
+        1,
         null,
         null,
         1,
@@ -915,10 +904,10 @@
         null,
         null,
         1,
-        0,
-        0,
-        0,
-        0,
+        1,
+        1,
+        1,
+        1,
         null,
         null,
         null,
@@ -930,6 +919,6 @@
         null
       ]
     },
-    "timestamp": 1499542195
+    "timestamp": 1499542489
   }
 }

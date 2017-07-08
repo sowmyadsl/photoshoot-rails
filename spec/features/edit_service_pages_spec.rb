@@ -1,12 +1,12 @@
 require 'rails_helper'
 
 feature "Sessions" do
-  scenario "admin edits  a service" do
+  scenario "admin edits a service" do
     admin = create(:admin)
     sign_in admin
     service = create(:service)
     visit edit_service_path(service)
-    fill_in 'service_name', with: "Edited Name"
+    fill_in 'Name', with: "Edited Name"
     click_button 'Update Service'
     expect(page).to have_content("Edited Name")
   end
@@ -16,7 +16,7 @@ feature "Sessions" do
     sign_in admin
     service = create(:service)
     visit edit_service_path(service)
-    fill_in 'service_name', with: ""
+    fill_in 'Name', with: ""
     click_button 'Update Service'
     expect(page).to have_content("error")
   end
