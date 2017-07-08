@@ -60,4 +60,17 @@ feature "Sessions" do
     click_button 'Create Service'
     expect(page).to have_content("Price can't be blank")
   end
+
+  scenario "admin can add a service" do
+    admin = create(:admin)
+    sign_in admin
+    service = build(:service)
+    visit new_service_path(admin)
+    fill_in 'Name', with: service.name
+    fill_in 'Description', with: service.description
+    fill_in 'Price', with: service.price
+    fill_in 'Image', with: service.image
+    click_button 'Create Service'
+    expect(page).to have_content("Service successfully added!")
+  end
 end

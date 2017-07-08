@@ -4,8 +4,8 @@
   <% @services.each do |service| %>
   <h1><%= service.name %></h1>
     <%= link_to service_path(service) do  %>
-      <%=image_tag service.image%>
-    <% end %>
+     <%=image_tag service.image%>
+  <% end %>
   <% end %>
 </div>
 
