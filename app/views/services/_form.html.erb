@@ -1,13 +1,25 @@
 <%= render "layouts/errors", :object => @service %>
 
 <%= form_for @service do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :description %>
-  <%= f.text_area :description %>
-  <%= f.label :price %>
-  <%= f.text_field :price %>
-  <%= f.label :image %>
-  <%= f.text_field :image %>
-  <%= f.submit %>
+<div class="field">
+    <%= f.label :name, "Name:", class: "col-md-3 control-label" %>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :description, "Description:", class: "col-md-3 control-label" %>
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :price, "Price:", class: "col-md-3 control-label" %>
+    <%= f.text_field :price %>
+  </div>
+  <!--div class="form-group" -->
+  <div class="field">
+    <%= f.label :image, "Image:", class: "col-md-3 control-label" %>
+    <%= f.text_field :image %>
+  </div>
+  <div class="field">
+    <%= f.submit %>
+  </div>
+
 <% end %>

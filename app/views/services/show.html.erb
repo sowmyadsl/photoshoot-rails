@@ -8,11 +8,13 @@
 <% end %>
 
 
+<div class="flex-box">
+  <h1><%= @service.name %></h1>
+  <h3><%= @service.description%></h3>
+  <figure><%=image_tag @service.image %></figure>
+  <h4><%= @service.price %></h4>
+</div>
 
-<h1><%= @service.name %></h1>
-<h3><%= @service.description%></h3>
-<figure><%=image_tag @service.image %></figure>
-<h4><%= @service.price %></h4>
 
 <hr>
 

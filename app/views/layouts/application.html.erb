@@ -10,6 +10,7 @@
 
   <body>
     <body>
+      <div id="wrapper">
     	<header class="navbar navbar-default" role="navigation">
         <div class="navbar-inner">
           <div class="container">
@@ -17,7 +18,7 @@
             <div id="logo" class="navbar-brand"><%= link_to "Home", root_path%> | <%= link_to 'Services', services_path %>
             </div>
             <p class="navbar-text pull-right">
-              Logged in as <strong><%= current_user.email %></strong> |
+              <span class="logged">logged in as <strong><%= current_user.email %></strong></span> |
               <%= link_to 'Edit Profile', edit_user_registration_path %> |
               <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
             </p>
@@ -43,11 +44,18 @@
     				<%= yield %>
     			</div>
     		</div>
-    	</div>
+
+
+      <div id="footer">
+        <p>Grace Photograpy | West Coast | Grace Photography © 2017 all rights reserved.</p>
+  		</div>
+    </div>
     </body>
 
+
+
   <footer>
-    <p>Grace Photograpy | West Coast | Grace Photography © 2017 all rights reserved.</p>
+
   </footer>
 </body>
 </html>
