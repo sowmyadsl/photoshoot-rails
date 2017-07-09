@@ -23,9 +23,12 @@
 
  /* The hero image */
  .hero-image {
-   width: 75%;
-   height: 75%;
-   position: fixed;
+   height: 100%;
+   position: absolute;
+   left: 0;
+   right: 0;
+   margin-top: -20px;
+   width: 100%;
    background-position: center;
    background-repeat: no-repeat;
    background-size: cover;
@@ -44,3 +47,10 @@
      font-weight: 600;
      color: White;
  }
+
+.navbar navbar-transparent {
+  background:transparent;
+background-image:none;
+border-color:transparent;
+box-shadow:none;
+}

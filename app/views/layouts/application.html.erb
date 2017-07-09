@@ -9,12 +9,11 @@
   </head>
 
   <body>
-	<header class="navbar navbar-default" role="navigation">
-    <div class="navbar-inner">
-      <div class="container">
+
+    <div class="navbar navbar-transparent">
+
         <% if user_signed_in? -%>
-        <div id="logo" class="navbar-brand"><%= link_to "Home", root_path%> | <%= link_to 'Services', services_path %>
-        </div>
+
         <p class="navbar-text pull-right">
           Logged in as <strong><%= current_user.email %></strong> |
           <%= link_to 'Edit Profile', edit_user_registration_path %> |
@@ -29,16 +28,16 @@
             <%= link_to "Login", new_user_session_path  %>
           </p>
         <% end %>
-      </div>
+
     </div>
-  </header>
+
 
 	<div id="main_content" class="container">
 		<% flash.each do |name, msg| %>
 			<%= content_tag(:div, msg, class: "alert alert-info") %>
 		<% end %>
 
-			<div id="content" class="col-md-9 center-block">
+			<div id="content">
 				<%= yield %>
 			</div>
 		</div>
