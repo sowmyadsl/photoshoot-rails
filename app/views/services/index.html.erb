@@ -1,5 +1,11 @@
 <h1>Services Offered:</h1>
 
+<% if current_user.try(:admin?) %>
+<p>Hello Admin,</p>
+<p>Add a new service: </p>
+  <button><%= link_to "New Service", new_service_path %></button>
+<% end %>
+
 <div class="flex-box">
   <% @services.each do |service| %>
   <h1><%= service.name %></h1>
@@ -8,7 +14,3 @@
   <% end %>
   <% end %>
 </div>
-
-<% if current_user.try(:admin?) %>
-  <button><%= link_to "New Service", new_service_path %></button>
-<% end %>
