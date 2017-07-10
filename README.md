@@ -10,7 +10,6 @@ By Sowmya Dinavahi
 ![screenshot](https://github.com/sowmyadsl/photoshoot-rails/blob/master/public/screenshot.png)
 
 
-
 ## Description:
 
 This application is build in consideration with users(customers) and grace(photographer ie. admin).These roles includes user authentication using Device gem.
@@ -30,6 +29,18 @@ This application is build in consideration with users(customers) and grace(photo
 * Delete Unnecessary and inappropriate reviews.
 
 Note: Admin information is seeded into database.
+
+
+### Usage
+You can log in using the credentials provided below, or sign up with your own information.
+
+| Type | Email | Password |
+| ---- | ----- | -------- |
+| Basic | user@email.com | password |
+| Admin | admin@admin.com | password |
+
+### Testing
+This application is tested using <a href="http://rspec.info/">rspec</a>. 100% of the application is successfully covered according to <a href="https://github.com/colszowka/simplecov">simplecov</a>
 
 ## Prerequisites
 

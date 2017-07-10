@@ -5,9 +5,9 @@
 <%= form_for [@service, @review] do |f| %>
   <%= f.label :author %>
   <%= f.text_field :author, class: :"form-control" %>
-
+  <br>
   <%= f.label :body %>
   <%= f.text_field :body, class: :"form-control" %>
-
+  <br>
   <p><%= f.submit %></p>
 <% end %>
