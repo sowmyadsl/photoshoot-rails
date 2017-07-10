@@ -1,10 +1,4 @@
-<% if current_user %>
-<div class= "col-md-12">
-  <h4>Welcome <%=current_user.email %>! </h4>
-    <p>Click on the image for more info on the package!</p>
-</div>
-<% end %>
-<br>
+
 
 <% if current_user.try(:admin?) %>
 <div class= "col-md-12">

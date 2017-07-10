@@ -20,7 +20,7 @@ feature "Sessions" do
     fill_in 'Description', with: service.description
     fill_in 'Image', with: service.image
     fill_in 'Price', with: service.price
-    click_button 'Create Service'
+    click_button 'Submit'
     expect(page).to have_content("Name can't be blank")
   end
 
@@ -33,7 +33,7 @@ feature "Sessions" do
     fill_in 'Name', with: service.name
     fill_in 'Image', with: service.image
     fill_in 'Price', with: service.price
-    click_button 'Create Service'
+    click_button 'Submit'
     expect(page).to have_content("Description can't be blank")
   end
 
@@ -45,7 +45,7 @@ feature "Sessions" do
     fill_in 'Name', with: service.name
     fill_in 'Description', with: service.description
     fill_in 'Price', with: service.price
-    click_button 'Create Service'
+    click_button 'Submit'
     expect(page).to have_content("Image can't be blank")
   end
 
@@ -57,7 +57,7 @@ feature "Sessions" do
     fill_in 'Name', with: service.name
     fill_in 'Description', with: service.description
     fill_in 'Image', with: service.image
-    click_button 'Create Service'
+    click_button 'Submit'
     expect(page).to have_content("Price can't be blank")
   end
 
@@ -70,7 +70,7 @@ feature "Sessions" do
     fill_in 'Description', with: service.description
     fill_in 'Price', with: service.price
     fill_in 'Image', with: service.image
-    click_button 'Create Service'
+    click_button 'Submit'
     expect(page).to have_content("Service successfully added!")
   end
 end

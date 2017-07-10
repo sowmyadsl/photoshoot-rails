@@ -7,7 +7,7 @@ feature "Sessions" do
     service = create(:service)
     visit edit_service_path(service)
     fill_in 'Name', with: "Edited Name"
-    click_button 'Update Service'
+    click_button 'Submit'
     expect(page).to have_content("Edited Name")
   end
 
@@ -17,7 +17,7 @@ feature "Sessions" do
     service = create(:service)
     visit edit_service_path(service)
     fill_in 'Name', with: ""
-    click_button 'Update Service'
+    click_button 'Submit'
     expect(page).to have_content("error")
   end
 end
