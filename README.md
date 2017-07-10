@@ -5,6 +5,12 @@ This is a ruby on rails application built for a photographer who locally capture
 
 By Sowmya Dinavahi
 
+## Landing Page:
+
+![screenshot](https://github.com/sowmyadsl/photoshoot-rails/blob/master/public/screenshot.png)
+
+
+
 ## Description:
 
 This application is build in consideration with users(customers) and grace(photographer ie. admin).These roles includes user authentication using Device gem.
