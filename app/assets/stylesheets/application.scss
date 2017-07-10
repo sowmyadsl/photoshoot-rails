@@ -17,90 +17,83 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-footer {
-   position: absolute;
-   left:0px;
-   bottom:0px;
-   height:30px;
-   width:100%;
-   text-align: center;
-   background: transparent;
+
+ strong {
+   display: inline;
+ }
+
+.navbar-link {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  color: black;
+  a {
+      color: white;
+      font-size: 24px;
+  }
+
 }
 
-.navbar-inner{
-  background-color: #51635c;
-  a{
-    color: white;
-    font-size: 15px;
-    line-height: 28px;
-    letter-spacing: 2px;
-    font-weight: 400;
-    font-style: normal;
-  }
-  .navbar-text pull-right{
-    color: white;
-  }
+a:hover, a:visited, a:link, a:active
+{
+    text-decoration: none;
+}
+
+html,
+body {
+	height:100%;
+}
+#wrapper {
+	min-height:100%;
+	position:relative;
+  background-size: cover;
+  background-position: center;
+}
+
+header {
+	background:#ededed;
+}
+.jumbotron{
+  background-image: asset-url("grace.jpg");
+  max-width: 100%;
+  width: 100%;
+  min-height:100%;
+  padding: 0;
+  margin: 0;
+  position:fixed;
+  top:0;
+  left:0;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+.col-md-3{
+  margin-top: 8%;
+}
+#content {
+}
+.main-content{
+  margin: 10%;
+}
+
+
+#footer {
+  color: black;
+	width:100%;
+	height:40px;
+	position:absolute;
+	bottom:0;
+	left:0;
+  text-align: right;
+}
+
+.alert-success{
+  float: right;
+
 }
 
 .logged{
-  color: white;
-  font-size: 15px;
-  line-height: 28px;
+  color: black;
   font-weight: 600;
 }
-
-strong{
-  color: #F4EEE7;
-  font-size: 15px;
-  line-height: 28px;
-  font-weight: 400;
-  font-style: italic;
-}
-
-.hero-text {
-     text-align: center;
-     position: fixed;
-     top: 50%;
-     left: 50%;
-     transform: translate(-50%, -50%);
-     font-weight: 600;
-     color: black;
- }
-
- html,
- body {
- 	margin:0;
- 	padding:0;
- 	height:100%;
- }
-
- header {
- 	min-height:100%;
- 	position:relative;
- }
-
- #wrapper {
- 	min-height:100%;
- 	position:relative;
- }
-
- #content {
- 	padding-bottom:100px; /* Height of the footer element */
- }
-
-#footer {
- 	background:#51635c;
- 	width:100%;
- 	height:50px;
- 	position:absolute;
- 	bottom:0;
- 	left:0;
-  padding-top: 10px;
-  color: white;
-  font-size: 15px;
- line-height: 28px;
- letter-spacing: 2px;
- font-weight: 400;
- font-style: normal;
-  text-align: center;
- }
