@@ -1,18 +1,20 @@
-<% if current_user %>
-<div class= "col-md-12">
-  <h4>Welcome <%=current_user.email %>! </h4>
-    <p>Click on the image for more info on the package!</p>
-</div>
-<% end %>
-<br>
 
-<% if current_user.try(:admin?) %>
-<div class= "col-md-12">
-<p>Hello Admin,</p>
-<p>Add a new service: </p>
-  <button><%= link_to "New Service", new_service_path %></button>
+<div class="panel panel-default">
+  <div class="panel-body"><% if current_user %>
+  <div class= "col-md-12">
+    <h4>Welcome <%=current_user.email %>! </h4>
+      <p>Click on the image for more info on the package!</p>
+  </div>
+  <% end %>
+  <br><% if current_user.try(:admin?) %>
+  <div class= "col-md-12">
+  <p>Hello Admin,</p>
+  <p>Add a new service: </p>
+    <button><%= link_to "New Service", new_service_path %></button>
+  </div>
+  <% end %></div>
 </div>
-<% end %>
+
 <br>
 <br>
 <div class="row clearfix">
