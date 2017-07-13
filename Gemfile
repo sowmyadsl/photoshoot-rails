@@ -19,6 +19,8 @@ gem 'jquery-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 gem 'devise'
+gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
@@ -29,7 +31,6 @@ gem 'coffee-rails', '~> 4.2'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
-gem "paperclip", "~> 5.0.0"
 
 
 # Use Redis adapter to run Action Cable in production
