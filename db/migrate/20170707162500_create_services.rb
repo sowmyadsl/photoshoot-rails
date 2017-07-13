@@ -4,7 +4,6 @@ class CreateServices < ActiveRecord::Migration[5.1]
       t.column :name, :string
       t.column :description, :string
       t.column :price, :string
-      t.column :image, :string
 
       t.timestamps
     end

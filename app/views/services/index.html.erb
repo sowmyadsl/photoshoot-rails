@@ -20,7 +20,7 @@
   <% @services.each do |service| %>
   <h3><%= service.name %></h3>
     <%= link_to service_path(service) do  %>
-    <%= image_tag @service.image.url(:medium) %>
+    <%= image_tag service.image(:medium) %>
      <% end %>
   <% end %>
 </div>
