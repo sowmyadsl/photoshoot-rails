@@ -97,3 +97,11 @@ header {
   color: black;
   font-weight: 600;
 }
+
+.panel{
+  width: 650px;
+  height: 650px;
+  .services{
+    padding: 30px;
+  }
+}
