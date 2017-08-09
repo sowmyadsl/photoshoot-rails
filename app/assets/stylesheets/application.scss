@@ -99,9 +99,18 @@ header {
 }
 
 .panel{
-  width: 650px;
-  height: 650px;
-  .services{
-    padding: 30px;
+  width: 100%;
+  display: inline-block;
+  vertical-align: top;
+    .panel-body{
+      display: inline-block;
+    }
+    .service-details{
+      margin: 5%;
+      display: inline-block;
+    }
+  .image{
+    width: 300px;
   }
+
 }
