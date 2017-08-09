@@ -6,14 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-def createServices
-    Service.create!(
-    name: 
-    price:
-    description:
-    image:
-    )
-end
 
 admin_list = [
   [ "admin@admin.com", "password"],
