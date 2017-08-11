@@ -1,0 +1,14 @@
+<%= form_for @contact do |f| %>
+<div class="well">
+  <%= f.label :name %>
+  <%= f.text_field :name, autofocus: true %>
+  <br>
+  <%= f.label :message %>
+  <%= f.text_area :description, placeholder: "Thanks for getting in touch" %>
+  <br>
+  <%= f.label :email_address %>
+  <%= f.email_field :email_address %>
+  <br>
+  <%= f.submit "Submit" %>
+</div>
+<% end %>
