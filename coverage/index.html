@@ -14,7 +14,7 @@
       <img src="./assets/0.10.1/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2017-08-08T18:14:26-07:00">2017-08-08T18:14:26-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2017-09-09T13:13:10-07:00">2017-09-09T13:13:10-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -32,8 +32,8 @@
   <a name="AllFiles"></a>
   <div>
     <b>33</b> files in total.
-    <b>302</b> relevant lines. 
-    <span class="green"><b>300</b> lines covered</span> and
+    <b>305</b> relevant lines. 
+    <span class="green"><b>303</b> lines covered</span> and
     <span class="red"><b>2</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -263,9 +263,9 @@
       <tr>
         <td class="strong"><a href="#b8315a94038dc224dde6392611935fced3793b89" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>12</td>
-        <td>6</td>
-        <td>6</td>
+        <td>16</td>
+        <td>9</td>
+        <td>9</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -3986,8 +3986,8 @@
     <h3>config/routes.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>6</b> relevant lines. 
-      <span class="green"><b>6</b> lines covered</span> and
+      <b>9</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -4034,19 +4034,19 @@
         <li class="covered" data-hits="1" data-linenumber="7">
           <span class="hits">1</span>
           
-          <code class="ruby">  resources :services do</code>
+          <code class="ruby">  resources :contacts, only: [:new]</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="8">
           <span class="hits">1</span>
           
-          <code class="ruby">    resources :reviews</code>
+          <code class="ruby">    get &quot;/contact&quot;, to: &quot;contacts#new&quot;, as: &quot;contacts&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="9">
+        <li class="covered" data-hits="1" data-linenumber="9">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">  end</code>
+          <code class="ruby">    post &quot;/contact&quot;, to: &quot;contacts#new&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="10">
@@ -4055,13 +4055,37 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="11">
+        <li class="covered" data-hits="1" data-linenumber="11">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  resources :services do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    resources :reviews</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="13">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="14">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="12">
+        <li class="never" data-hits="" data-linenumber="15">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="16">
           
           
           <code class="ruby">end</code>
