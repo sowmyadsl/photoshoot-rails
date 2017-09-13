@@ -24,6 +24,7 @@ gem 'simple_form'
 gem 'uglifier', '>= 1.3.0'
 gem 'devise'
 gem "paperclip", "~> 5.0.0.beta1"
+gem 'rails_admin', '~> 1.2'
 
 
 # See https://github.com/rails/execjs#readme for more supported runtimes
